@@ -1,0 +1,11 @@
+#page-footer{
+    position: relative !important;
+}
+
+.ep--container{
+    margin-bottom: 250px;
+}
+
+.ep--container .row{
+    margin-top: 25px;
+}

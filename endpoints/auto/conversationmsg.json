@@ -1,0 +1,66 @@
+{
+    "getAll": {
+        "route": "/conversationmsg",
+        "method": "GET",
+        "sql": "SELECT * FROM conversationmsg",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all conversationmsg"
+    },
+    "getById": {
+        "route": "/conversationmsg/$conversationMsgId",
+        "method": "GET",
+        "sql": "SELECT * FROM conversationmsg WHERE conversationMsgId = $conversationMsgId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'conversationmsg' by its primary key"
+    },
+    "create": {
+        "route": "/conversationmsg",
+        "method": "POST",
+        "sql": "INSERT INTO conversationmsg(userIniciaId, userOtroId, conversacion, inicioDate, finDate) VALUES ($userIniciaId, $userOtroId, $conversacion, $inicioDate, $finDate)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'conversationmsg'",
+        "request_body_params": [
+            "userIniciaId",
+            "userOtroId",
+            "conversacion",
+            "inicioDate",
+            "finDate"
+        ]
+    },
+    "update": {
+        "route": "/conversationmsg/$conversationMsgId",
+        "method": "PUT",
+        "sql": "UPDATE conversationmsg SET userIniciaId = $userIniciaId, userOtroId = $userOtroId, conversacion = $conversacion, inicioDate = $inicioDate, finDate = $finDate WHERE conversationMsgId = $conversationMsgId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'conversationmsg' by its primary key",
+        "request_body_params": [
+            "userIniciaId",
+            "userOtroId",
+            "conversacion",
+            "inicioDate",
+            "finDate"
+        ]
+    },
+    "delete": {
+        "route": "/conversationmsg/$conversationMsgId",
+        "method": "DELETE",
+        "sql": "DELETE FROM conversationmsg WHERE conversationMsgId = $conversationMsgId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'conversationmsg' by its primary key"
+    }
+}

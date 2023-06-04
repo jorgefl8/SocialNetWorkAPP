@@ -1,0 +1,84 @@
+{
+    "getAll": {
+        "route": "/searchpreferences",
+        "method": "GET",
+        "sql": "SELECT * FROM searchpreferences",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all searchpreferences"
+    },
+    "getById": {
+        "route": "/searchpreferences/$searchPreferencesId",
+        "method": "GET",
+        "sql": "SELECT * FROM searchpreferences WHERE searchPreferencesId = $searchPreferencesId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'searchpreferences' by its primary key"
+    },
+    "create": {
+        "route": "/searchpreferences",
+        "method": "POST",
+        "sql": "INSERT INTO searchpreferences(userId, ageRangeMin, ageRangeMax, heightRangeMin, heightRangeMax, weightRangeMin, weightRangeMax, gender, hairColor, eyeColor, provinceId, municipalityId, postcodeId, hobbiesListId) VALUES ($userId, $ageRangeMin, $ageRangeMax, $heightRangeMin, $heightRangeMax, $weightRangeMin, $weightRangeMax, $gender, $hairColor, $eyeColor, $provinceId, $municipalityId, $postcodeId, $hobbiesListId)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'searchpreferences'",
+        "request_body_params": [
+            "userId",
+            "ageRangeMin",
+            "ageRangeMax",
+            "heightRangeMin",
+            "heightRangeMax",
+            "weightRangeMin",
+            "weightRangeMax",
+            "gender",
+            "hairColor",
+            "eyeColor",
+            "provinceId",
+            "municipalityId",
+            "postcodeId",
+            "hobbiesListId"
+        ]
+    },
+    "update": {
+        "route": "/searchpreferences/$searchPreferencesId",
+        "method": "PUT",
+        "sql": "UPDATE searchpreferences SET userId = $userId, ageRangeMin = $ageRangeMin, ageRangeMax = $ageRangeMax, heightRangeMin = $heightRangeMin, heightRangeMax = $heightRangeMax, weightRangeMin = $weightRangeMin, weightRangeMax = $weightRangeMax, gender = $gender, hairColor = $hairColor, eyeColor = $eyeColor, provinceId = $provinceId, municipalityId = $municipalityId, postcodeId = $postcodeId, hobbiesListId = $hobbiesListId WHERE searchPreferencesId = $searchPreferencesId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'searchpreferences' by its primary key",
+        "request_body_params": [
+            "userId",
+            "ageRangeMin",
+            "ageRangeMax",
+            "heightRangeMin",
+            "heightRangeMax",
+            "weightRangeMin",
+            "weightRangeMax",
+            "gender",
+            "hairColor",
+            "eyeColor",
+            "provinceId",
+            "municipalityId",
+            "postcodeId",
+            "hobbiesListId"
+        ]
+    },
+    "delete": {
+        "route": "/searchpreferences/$searchPreferencesId",
+        "method": "DELETE",
+        "sql": "DELETE FROM searchpreferences WHERE searchPreferencesId = $searchPreferencesId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'searchpreferences' by its primary key"
+    }
+}

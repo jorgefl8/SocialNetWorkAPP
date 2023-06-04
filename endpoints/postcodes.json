@@ -1,0 +1,12 @@
+{
+    "getByMunicipalityId": {
+        "route": "/postcodes/municipality/$municipalityId",
+        "method": "GET",
+        "sql": "SELECT * FROM postcodes WHERE municipalityId = $municipalityId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'postcodes' by MunicipalityId"
+    }
+}

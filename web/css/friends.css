@@ -1,0 +1,39 @@
+@import url(general.css);
+
+div.card{
+    margin-bottom: 2%;
+}
+#foto_titulo{
+    width:45px;
+    left: 0%;
+}
+
+.friend-result{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin: 2px;
+}
+
+.friend-result:hover{
+    border: 2px solid rgba(0,0,0,.125);
+}
+
+.friend-result .avatar-img{
+    width: 150px;
+    height: 150px;
+}
+
+.friend-result img{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.friend-buttons button{
+    padding: 6px 5px !important;
+}
+
+.friend-img{
+    padding-left: 0px;
+    height: 150px;
+}

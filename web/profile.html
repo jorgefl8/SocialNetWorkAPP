@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/web/images/icono-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+ 
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <script src="js/utils/parseHTML.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <script src="js/profile.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+    <title>Perfil</title>
+</head>
+<body>
+    <div id="page-header"></div>
+    <div id="user-container" class="container p--container">
+        <div id="errors"></div>
+        <div id="user-info">
+            
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md mb-3">
+                <h4>Álbum de fotos</h4>
+            </div>
+        </div>
+        <div id="user-pictures" class="row centered">
+            <div class="offset-md-1"></div>
+        </div>
+        
+        <!-- <hr>
+        <div class="row">
+            <div class="col-md mb-3"><h4>Mensajes</h4></div>
+        </div>
+        <div class="mb-4 row">
+            
+        </div> -->
+    </div>
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+</html>

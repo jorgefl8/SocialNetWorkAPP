@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Fjalla+One&display=swap');
+@import url(header.css);
+@import url(footer.css);
+
+
+/* Hoja de estilos generales */
+
+:root {
+    --main-bg-color: rgb(230, 230, 243);
+    --color-oscuro-1: #25274D;
+    --color-oscuro-2: #464866;
+    --color-oscuro-3: #AAABB8;
+    --color-azul-1: #2E9CCA;
+    --color-azul-2: #29648A;
+    --color-blanco-1: #DEF2F1;
+    --color-blanco-2: #FEFFFF;
+}
+
+body{
+    background-color: #f0f2f5 !important;
+    font-family: 'Dosis', sans-serif !important;
+}
+
+.centered{
+    text-align: center;
+}
+
+#title{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.img-logo {
+    max-width: 65px;
+}
+.enlace:link{
+    text-decoration: none;
+}
+
+#loading-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.loading {
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.25;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- Css -->
+    <link rel="shortcut icon" href="/web/images/icono-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Javascripts -->
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <script src="js/register.js" type="module"></script>
+    <!-- título -->
+    <title>Registro</title>
+</head>
+<body>
+    <!-- Container Bootstrap -->
+    <div class="container r--container">
+        <!-- Logo inicial Issi Friends -->
+        <nav class="navbar justify-content-center" id="title">
+            <a class="navbar-brand d-flex align-items-end" href="#">
+                <img width="60" height="60" class="d-inline-block align-top" src="images/icono-web.png" alt="IISSI2-Friends Logo">
+                <span class="h1 text-primary">iissi friends</span>
+            </a>
+        </nav>
+        <!-- Div donde mostrar los errores -->
+        <div id="errors"></div>
+        <!-- Formulario -->
+        <form id="registerForm">
+            <!-- Bloque de datos personales -->
+            <hr>
+            <!-- DATOS DE CUENTA -->
+            <div class="account-data">
+                <!-- Texto: DATOS DE LA CUENTA -->
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <h5 class="text-primary">
+                            Datos de la cuenta
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- INPUT:NOMBRE DE USUARIO -->
+                    <div class="col-md-4 form-group">
+                        <label for="userName-input" class="form-label">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="userName-input" placeholder="Usuario" name="username" autocomplete="username">
+                    </div>
+                    <!-- INPUT:NOMBRE -->
+                    <div class="col-md-4 form-group">
+                        <label for="name-input" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name-input" placeholder="Nombre" name="firstName">
+                    </div>
+                    <!-- INPUT:APELLIDOS -->
+                    <div class="col-md-4 form-group">
+                        <label for="lastname-input" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="lastname-input" placeholder="Apellidos" name="lastName">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- INPUT: CONTRASEÑA  -->
+                    <div class="col-md-4 form-group">
+                        <label for="password-input" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password-input" placeholder="Contraseña" name="password" autocomplete="new-password">
+                    </div>
+                    <!-- INPUT: CONFIRMACION CONTRASEÑA -->
+                    <div class="col-md-4 form-group">
+                        <label for="password-confirmation-input" class="form-label">Confirma tu contraseña</label>
+                        <input type="password" class="form-control" id="password-confirmation-input" placeholder="Confirma tu contraseña" name="password2" autocomplete="new-password">
+                    </div>
+                    <!-- Avatar URL -->
+                    <div class="col-md-4 form-group">
+                        <label for="avatarUrl-input" class="form-label">Avatar URL</label>
+                        <input type="text" class="form-control" id="avatarUrl-input" placeholder="URL" name="avatarUrl">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- EMAIL -->
+                    <div class="col-md-4">
+                        <label for="email-input" class="form-label">Email</label>
+                        <div class="input-group mb-3">
+                            <!-- Input -->
+                            <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></i></span>
+                            <input type="email" class="form-control" placeholder="email" aria-label="email" id="email-input" name="email" autocomplete="email">
+                        </div>
+                    </div>
+                    <!-- FECHA DE NACIMIENTO -->
+                    <div class="col-md-4 mb-3">
+                        <label for="birthdate" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="birthdate" name="dateOfBirth">
+                    </div>
+                </div>
+                <!-- DIRECCIÓN -->
+                <div class="row">
+                    <div id="autocomplete-ubi" class="col-md-8">
+                        <label for="address-input" class="form-label">Municipio</label>
+                        <input autocomplete="off" type="text" class="form-control mb-3" id="address-input" placeholder="Busca y selecciona de donde eres!" name="address" required>
+                    </div>
+                    <!-- Codigo Postal -->
+                    <div class="col-md-4 mb-3">
+                        <label for="telephone" class="form-label">Codigo Postal</label>
+                        <input type="text" class="form-control" id="postalCode" placeholder="41012" pattern="\d{5}" name="postcode">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <!-- GENERO (RADIO BUTTON)-->
+                    <label class="col-md-2 px-5">Género</label>
+                    <div id="gender" class="col-md-9 mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="maleGender" value="male">
+                            <label class="form-check-label" for="maleGender">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="female">
+                            <label class="form-check-label" for="femaleGender">Femenino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="undefinedGender" value="other" checked>
+                            <label class="form-check-label" for="undefinedGender">Otro</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- DATOS FÍSICOS -->
+            <div class="physical-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="text-primary">
+                            ¿Cómo eres?
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- COLOR DE OJOS -->
+                    <div class="col-md-3">
+                        <label for="colorEyes-input" class="form-label">Color de ojos</label>
+                        <select id="colorEyes-input" class="form-select" aria-label="Selector de color de ojos" name="eyeColor">
+                            <option selected value="black">Negros</option>
+                            <option value="brown">Castaños</option>
+                            <option value="blue">Azules</option>
+                            <option value="green">Verdes</option>
+                            <option value="gray">Grises</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <!-- COLOR DE PELO -->
+                    <div class="col-md-3">
+                        <label for="colorHair-input" class="form-label">Color de pelo</label>
+                        <select id="colorHair-input" class="form-select" aria-label="Selector de color de pelo" name="hairColor">
+                            <option selected value="black">Negro</option>
+                            <option value="brown">Castaño</option>
+                            <option value="blonde">Rubio</option>
+                            <option value="red">Rojo</option>
+                            <option value="gray">Gris</option>
+                        </select>
+                    </div>
+                    <!-- COMPLEXION -->
+                    <div class="col-md-3 form-group">
+                        <label for="weight-input" class="form-label">Peso (kg)</label>
+                        <input id="weight-input" type="number" class="form-control" value="75" placeholder="Peso (kg)" name="weight">
+                    </div>
+                    <!-- ALTURA -->
+                    <div class="col-md-3 form-group">
+                        <label for="height-input" class="form-label">Altura (cm)</label>
+                        <input id="height-input" type="number" class="form-control" value="170" placeholder="Altura (cm)" name="height">
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- AFICIONES -->
+                    <div class="col-md-4">
+                        <label for="hobbies-input">Aficiones</label>
+                        <select id="hobbies-input" class="form-select" multiple aria-label="multiple select">
+                            <option>Selecciona algunas aficiones</option>
+                        </select>
+                        <div class="row">
+                            <div class="col-9"><input type="text" id="newHobby-input" class="form-control" placeholder="¿No ves tu hobby?"></div>
+                            <div class="col-3"><button type="button" id="newHobby-create" class="btn btn-success w-100"><i class="fa fa-plus" aria-hidden="true"></i></button></div>
+                        </div>
+                    </div>
+
+                    <div id="hobbies-container" class="col-md-8 py-4 text-center">
+                        <div id="hobbies-selected" class="row">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Biografia -->
+                    <label for="bio-input">Biografía</label>
+                    <div class="input-group">
+                        <textarea id="bio-input" class="form-control" aria-label="With textarea" placeholder="Preséntate al resto de iissi-friends!" maxlength="1024" name="bio"></textarea>
+                    </div>
+                </div>
+                <hr>
+                 <!-- Bloque del boton de registro -->
+                <div class="row registrer">
+                    <div class="col-md centered">
+                        <button class="btn btn-primary space_register_button" type="submit">
+                            Registrarse
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- footer -->
+    <div id="page-footer"></div>
+    <script>
+        include("footer.html", "#page-footer");
+    </script>
+</body>
+</html>

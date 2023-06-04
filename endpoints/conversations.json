@@ -1,0 +1,12 @@
+{
+    "getAllByuserId": {
+        "route": "/users/$userId/conversations",
+        "method": "GET",
+        "sql": "SELECT * FROM conversationmsg WHERE (userIniciaId = $userId OR userOtroId = $userId) AND finDate IS NULL",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all conversations open of an user"
+    }
+}

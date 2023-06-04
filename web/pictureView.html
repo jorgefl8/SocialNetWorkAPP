@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/web/images/icono-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/pictureView.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/pictureView.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+
+
+    <title>Visualizador de foto</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+    <div class="container mb-5 mt-4">
+        <div id="errors"></div>
+        <div class="row">
+            <div class="col-md-6" id="details-column">
+            <div class="row" id="moredetails-column"></div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="row text-center">
+                    <div id="edit-delete"></div>
+
+
+                    <div class="row">
+                        <h4 class="mt-5 mb-3">Más fotos:</h4>
+                        <div id="card-gallery"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

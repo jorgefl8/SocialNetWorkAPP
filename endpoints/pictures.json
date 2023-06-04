@@ -1,0 +1,12 @@
+{
+    "getAllByuserId": {
+        "route": "/users/$userId/pictures",
+        "method": "GET",
+        "sql": "SELECT pictures.pictureId, pictures.name, pictures.pictureURL FROM users JOIN pictures ON pictures.userId = users.userId WHERE users.userId = $userId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all pictures of an specified user"
+    }
+}

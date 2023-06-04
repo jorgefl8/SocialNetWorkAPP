@@ -1,0 +1,12 @@
+{
+    "getPartialSearchByName": {
+        "route": "/municipalities/search/$partialName",
+        "method": "GET",
+        "sql": "SELECT municipalities.municipalityId, municipalities.municipalityName, provinces.provinceId, provinces.provinceName FROM municipalities JOIN provinces ON municipalities.provinceId = provinces.provinceId WHERE municipalityName RLIKE CONCAT('^', $partialName) LIMIT 5;",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Devuelve una lista con los municipios que cumplen con la busqueda parcial."
+    }
+}

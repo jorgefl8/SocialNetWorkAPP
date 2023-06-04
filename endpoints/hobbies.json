@@ -1,0 +1,22 @@
+{
+    "getAllByuserId": {
+        "route": "/users/$userId/hobbies",
+        "method": "GET",
+        "sql": "SELECT * FROM userhobbies JOIN hobbies ON hobbies.hobbyId = userhobbies.hobbyId WHERE userhobbies.userId=$userId;",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all pictures of an specified user"
+    },
+    "deleteAll": {
+        "route": "/users/$userId/hobbies",
+        "method": "DELETE",
+        "sql": "DELETE FROM userhobbies WHERE userId = $userId;",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'userhobbies' by its primary key"
+    }
+}

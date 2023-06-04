@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/web/images/icono-web.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Javascript -->
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <script src="js/index.js" type="module"></script>
+    <!-- Título -->
+    <title>Entrar o Registrarse</title>
+</head>
+
+<body>
+    <!-- Clase container de bootstrap -->
+    <div class="container">
+        <!-- Una línea con dos columnas -->
+        <div class="row">
+            <!-- Contenido -->
+            <div class="col-md-7">
+                <!-- Texto de IISSI FRIENDS -->
+                <h1 class="text-primary" id="title">
+                    iissi friends
+                </h1>
+                <hr>
+                <!-- Video -->
+                <h5 class=" centered">NUESTRO VÍDEO DE PRESENTACIÓN</h5>
+                <!-- Vídeo de presentación de la RRSS -->
+                <div class=" centered embed-responsive embed-responsive-16by9 embed-responsive-custom">
+                    <video controls="" width="80%" height="80%" name="media">
+                        <source src="/web/video/Presentación IISSI Friends.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <!-- Inicio de Sesion y registro-->
+            <div id="border" class="col-md-4 mt-5 mx-2 flex-shrink-1">
+                <!-- Input del correo electronico -->
+                <div class="mt-4 col-md justify-content-center">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="email-input" placeholder="Correo electrónico">
+                        <label for="email-input">Correo electrónico</label>
+                    </div>
+                </div>
+                <!-- Input de la contraseña -->
+                <div class="mt-3 col-md justify-content-center">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="password-input" placeholder="Contraseña">
+                        <label class="centered" for="password-input">Contraseña</label>
+                    </div>
+                </div>
+                <!-- Boton de iniciar sesion -->
+                <div class="mt-2 row justify-content-center">
+                    <button id="btn-login" class="btn btn-primary" style="width: 95%">
+                        <h5 class="centered">Iniciar Sesión <i class="fa fa-sign-in" aria-hidden="true"></i></h5>
+                    </button>
+                </div>
+                <!-- enlace de restauración de contraseña -->
+                <div class="row">
+                    <div class="col-md mt-3">
+                        <a class="enlace" href="resetPassword.html">
+                            <h5>¿Has olvidado tu contraseña?</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- enlace de creacion de cuenta nueva -->
+                <div class="mt-4 row justify-content-center text-center">
+                    <div class="col-md-5">
+                        <a id="btn-create" class="btn btn-success"href="register.html" role="button">
+                            <h5 class="centered">Nueva cuenta</h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Div donde introducir los errores -->
+                <div id="errors" class="my-2"></div>
+            </div>
+        </div>
+    </div>  
+    <div id="page-footer"></div>
+    
+    <script>
+        include("footer.html", "#page-footer");
+    </script>
+
+</body>
+
+</html>

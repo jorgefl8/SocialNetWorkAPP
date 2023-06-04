@@ -1,0 +1,11 @@
+#page-footer{
+    position: relative !important;
+}
+
+.r--container{
+    margin-bottom: 250px;
+}
+
+.r--container .row{
+    margin-top: 25px;
+}

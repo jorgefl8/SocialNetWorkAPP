@@ -1,0 +1,48 @@
+footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background: #ffffff;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+#font{
+    font-size: 100%;
+}
+#icono{
+    font-size: 130%;
+}
+#margin{
+  margin-right: 10%;
+}
+.center-image{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}

@@ -1,0 +1,68 @@
+{
+    "getAll": {
+        "route": "/userfriendrequest",
+        "method": "GET",
+        "sql": "SELECT * FROM userfriendrequest",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all userfriendrequest"
+    },
+    "getById": {
+        "route": "/userfriendrequest/$userFriendRequestId",
+        "method": "GET",
+        "sql": "SELECT * FROM userfriendrequest WHERE userFriendRequestId = $userFriendRequestId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'userfriendrequest' by its primary key"
+    },
+    "create": {
+        "route": "/userfriendrequest",
+        "method": "POST",
+        "sql": "INSERT INTO userfriendrequest(userSolicitanteId, userAceptanteId, solicitanteDate, aceptanteDate, solicitanteRevocacionDate, aceptanteRevocacionDate) VALUES ($userSolicitanteId, $userAceptanteId, $solicitanteDate, $aceptanteDate, $solicitanteRevocacionDate, $aceptanteRevocacionDate)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'userfriendrequest'",
+        "request_body_params": [
+            "userSolicitanteId",
+            "userAceptanteId",
+            "solicitanteDate",
+            "aceptanteDate",
+            "solicitanteRevocacionDate",
+            "aceptanteRevocacionDate"
+        ]
+    },
+    "update": {
+        "route": "/userfriendrequest/$userFriendRequestId",
+        "method": "PUT",
+        "sql": "UPDATE userfriendrequest SET userSolicitanteId = $userSolicitanteId, userAceptanteId = $userAceptanteId, solicitanteDate = $solicitanteDate, aceptanteDate = $aceptanteDate, solicitanteRevocacionDate = $solicitanteRevocacionDate, aceptanteRevocacionDate = $aceptanteRevocacionDate WHERE userFriendRequestId = $userFriendRequestId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'userfriendrequest' by its primary key",
+        "request_body_params": [
+            "userSolicitanteId",
+            "userAceptanteId",
+            "solicitanteDate",
+            "aceptanteDate",
+            "solicitanteRevocacionDate",
+            "aceptanteRevocacionDate"
+        ]
+    },
+    "delete": {
+        "route": "/userfriendrequest/$userFriendRequestId",
+        "method": "DELETE",
+        "sql": "DELETE FROM userfriendrequest WHERE userFriendRequestId = $userFriendRequestId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'userfriendrequest' by its primary key"
+    }
+}

@@ -1,0 +1,43 @@
+img.profile-picture {
+    max-width: 50px !important;
+}
+
+a.linkphoto {
+    text-decoration: none;
+}
+
+
+#btn-color{
+    background-color: #36A420;
+    color: white;
+}
+#center-image{
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+#img-cuadrar{
+   
+    justify-content: center !important;
+}
+.imgdisplay {
+    width: 50%;
+}
+
+#picture{
+    background-color: #ffffff;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 30%;
+    border-color: #f0f2f5;
+    box-shadow: 0 0 10px rgb(173, 173, 173); 
+}
+
+#picture:hover {
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 0 0 2px rgb(173, 173, 173);
+}
+#photo{
+    width: 60%;
+    border-radius: 7%;
+}

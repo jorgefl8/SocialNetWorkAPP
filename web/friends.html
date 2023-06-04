@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/friends.css" />
+  <link rel="stylesheet" href="css/header.css" />
+
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/utils/include.js"></script>
+  <script src="js/friends.js" type="module"></script>
+  <script src="js/index.js" type="module"></script>
+  <script src="js/header.js" type="module"></script>
+
+
+  <title>Amigos</title>
+</head>
+
+<body>
+  <div id="page-header"></div>
+  <div class="container">
+    <h4 class="m-3">Busqueda easy de amigos</h4>
+    <div class="row d-flex">
+      <div class="col-md-4">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Busca algo!">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 search-filters mx-3">
+        <div class="row">
+          <!-- Dropdowns para selectores de filtro de busqueda -->
+          <div class="dropdown col-md-2">
+            <button class="btn btn-success dropdown-toggle rounded-pill" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Aficiones
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="futbol">Futbol</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="fotografia">Fotografia</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="senderismo">Senderismo</a></li>
+            </ul>
+          </div>
+          <!-- Modificar el resto segun pdf de requisitos -->
+          <div class="dropdown col-md-2">
+            <button class="btn btn-success dropdown-toggle rounded-pill" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Nosek
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="futbol">Futbol</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="fotografia">Fotografia</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="senderismo">Senderismo</a></li>
+            </ul>
+          </div>
+          <div class="dropdown col-md-2">
+            <button class="btn btn-success dropdown-toggle rounded-pill" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Otro filtro
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="futbol">Futbol</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="fotografia">Fotografia</a></li>
+              <li><a class="dropdown-item" onclick="addQueryParamFriend();" value="senderismo">Senderismo</a></li>
+            </ul>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="friendsBrowseResults" class="ml-2 row">
+      
+    </div>
+  </div>
+  <script>
+    include("header.html", "#page-header");
+  </script>
+</body>
+
+</html>

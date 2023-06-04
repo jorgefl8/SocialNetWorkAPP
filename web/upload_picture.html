@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icono-web.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/pictureView.css">
+
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+    <script src="js/upload_picture.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+
+    <title>Subir foto</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+    <div class="container mb-5 mt-4">
+        <h1 class="text-center text-primary" id="page-title">
+            Sube una nueva foto
+        </h1>
+        <hr>
+
+        
+
+        <div class="row">
+            <div class="col-md-6">
+                <form id="form-picture-upload">
+                    <div id="errors"></div>
+                    <div class="form-group">
+                        <label for="input-url">URL:</label>
+                        <input required type="text" class="form-control" id="input-url" name="pictureURL"
+                            placeholder="URL de la foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-title">Título:</label>
+                        <input required type="text" class="form-control" id="input-title" name="name"
+                            placeholder="Título de la foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="input-description">Descripción:</label>
+                        <textarea class="form-control" id="input-description" name="description"
+                            placeholder="Describe tu foto..." rows="3"></textarea>
+                    </div>
+                   
+                    <div class="row mt-2">
+                        <div class="col-md text-center">
+                            <button type="submit" id="page-button" class="btn btn-primary">
+                                Subir
+                                <i class="fa fa-upload" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 mt-5 text-center" id="img-cuadrar">
+                <img src="images/placeholder-img.jpg" alt="Vista previa de la foto" id="picture-preview" class="imgdisplay rounded">
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+    "getAllUserFriends": {
+        "route": "/users/$userId/friends",
+        "method": "GET",
+        "sql": "SELECT * FROM userfriendrequest WHERE (userSolicitanteId = $userId OR userAceptanteId = $userId) AND aceptanteDate",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all friends of an user by userId"
+    },
+    "getAllUserPendingRequest": {
+        "route": "/users/$userId/requests",
+        "method": "GET",
+        "sql": "SELECT * FROM userfriendrequest WHERE userAceptanteId = $userId AND aceptanteDate IS NULL",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all friends request (not acepted) of an user by userId"
+    }
+}

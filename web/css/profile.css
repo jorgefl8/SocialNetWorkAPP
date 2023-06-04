@@ -1,0 +1,104 @@
+@import url(general.css);
+
+
+/* FORMATO DE LAS IMAGENES EN CSS */
+
+.img-square-large {
+    width: 170px;
+    height: 170px;
+    border-top-left-radius: 10% 10%;
+    border-top-right-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
+    border-bottom-left-radius: 10% 10%;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-square-medium {
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 10% 10%;
+    border-top-right-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
+    border-bottom-left-radius: 10% 10%;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-square-small {
+    width: 53px;
+    height: 53px;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-square-xs {
+    width: 33px;
+    height: 33px;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-circle-large {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 2px;
+    background-color: #ffffff;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 30%;
+    border-color: #f0f2f5;
+    box-shadow: 0 0 10px rgb(173, 173, 173);
+}
+
+
+.img-circle-medium {
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-circle-small {
+    width: 53px;
+    height: 53px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+.img-circle-xs {
+    width: 33px;
+    height: 33px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: 2px solid #CCC;
+    margin-bottom: 2px;
+}
+
+/* Estilos profile */
+
+.p--container {
+    margin-top: 25px;
+}
+
+.p--username {
+    margin-right: 20px;
+}
+
+.p--profile-img {
+    padding: auto;
+}
+
+.p--profile-info>.row {
+    margin-top: 10px;
+}
